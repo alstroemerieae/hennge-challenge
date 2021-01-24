@@ -1,0 +1,86 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  main {
+    // border: 10px solid red;
+    padding: 2rem 0rem 0rem 0rem !important;
+    .inbox-history {
+      &-results {
+        padding: 1rem 0; // repeated
+        display: flex !important; // repeated
+        justify-content: start !important; // repeated
+      }
+      &-header {
+        padding: 1rem 0;
+        display: flex !important;
+        justify-content: start !important;
+        // All items inside header  
+        & > * {
+          padding: 0 .5rem;
+          border-right: 1px solid var(--dark-color);
+        }
+      }
+      &-item {
+        // border: 2px solid cyan;
+        display: grid;
+        grid-template-columns: .3fr 9fr 1fr !important;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 1rem 0;
+        &-icons {
+          grid-row: 1/3;
+          display: flex !important;
+          flex-direction: column;
+          align-items: center;
+          padding: .5rem;
+          font-size: 1rem;
+        }
+        &-sender {
+          grid-column: 2/3;
+          grid-row: 1/1;
+          font-weight: bold;
+
+          display: flex;
+          justify-content: space-between;
+          padding-right: 1rem;
+        }
+        &-recipient {
+          grid-column: 2/4;
+          grid-row: 2/3;
+        }
+        &-subject {
+          grid-column: 1/4;
+          grid-row: 3/4;
+          font-size: 1.5rem;
+        }
+        &-date {
+          grid-column: 3/4;
+          grid-row: 1/1;
+          font-weight: normal !important;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

@@ -1,0 +1,152 @@
+// Add active item on header [from, to, subject, (date)]
+// Add on hover style
+
+// Colors
+:root {
+	--lighter-color: #ffffff;
+	--light-color: #f6f5f4;
+	--gray-color: #888580;
+	--dark-color: #666460;
+  --darker-color: #343535;
+  --hover-color: #0037d9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  background: var(--lighter-color);
+  color: var(--darker-color);
+  height: 100vh;
+  font-size: 1.25rem;
+  font-family: sans-serif;
+
+  header {
+    padding: 2rem 2rem 0rem 2rem;
+    display: flex;
+
+    .search-bar {
+      display: inherit;
+      border: 1px solid var(--gray-color);
+      border-radius: 0.5rem;
+      &-date-selector {
+        display: inherit;
+        padding: 1rem;
+        
+        i.far.fa-calendar-alt {
+          margin-right: 1rem;
+          color: var(--dark-color);
+        }
+      }
+      &-button {
+        background: var(--light-color);
+        padding: 1rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .inbox-history {
+      display: grid;
+      grid-template-columns: 1.5fr 2.5fr 5fr 1fr;
+      // border: 1px solid red;
+      grid-template-rows: repeat(12, 1fr);
+      height: 100%;
+
+      &-results,
+      &-header,
+      &-item {
+        grid-column: 1/5;
+        display: grid;
+        grid-template-columns: inherit;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1rem;
+      }
+      &-results {
+        font-weight: bold;
+        color: var(--dark-color);
+        &-counter {
+          grid-column: inherit;
+        }
+      }
+      &-item {
+        border-bottom: 1px solid gray;
+        &-icons {
+          display: none;
+        }
+        &-sender,
+        &-subject {
+          overflow: hidden;
+        }
+        &-recipient,
+        &-subject {
+          display: flex;
+          justify-content: space-between;
+          padding-right: 2rem;
+        }
+      }
+      &-item:hover {
+        color: var(--hover-color);
+        cursor: pointer;
+        background-color: var(--light-color)
+      }
+      &-header {
+        border-top: 1px solid var(--gray-color);
+        border-bottom: 1px solid var(--gray-color);
+        background-color: var(--light-color);
+        color: var(--dark-color);
+        font-weight: bold;
+      }
+      &-item-date {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.active-header-item {
+  color: var(--darker-color);
+}
+
+.recipients-counter {
+  display: inline;
+  color: var(--lighter-color);
+  background: var(--dark-color);
+  padding: .2rem .5rem .2rem .5rem;
+  border-radius: .2rem;
+}
+
+.mobile {
+  display: none
+}
+
+// Visuals
+// main {
+//   border: 2px solid magenta;
+//   .inbox-history {
+//     background: gray;
+//     border: 2px solid cyan;
+//     &-results {
+//       background: red;
+//     }
+//     &-header {
+//       background: green;
+//     }
+//     &-item {
+//       background: yellow;
+//     }
+//   }
+// }
+
+@import "mediaqueries";

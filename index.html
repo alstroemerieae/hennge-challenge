@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Luciano Alcaraz">
+  <meta name="description" content="FrontEnd challenge for Hennge">
+  <!-- Site icon file -->
+  <link rel="icon" href="favicon.png" />
+  <!-- FontAwesome css file -->
+  <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+  <!-- Main css file -->
+  <link rel="stylesheet" href="src/css/main.css">
+  <!-- Page's title -->
+  <title>Henge Challenge</title>
+</head>
+
+<body>
+  <header>
+    <div class="search-bar">
+      <div class="search-bar-date-selector">
+        <i class="far fa-calendar-alt"></i>
+        <div class="date">2019/12/31 - 2020/1/3</div>
+      </div>
+      <div class="search-bar-button">
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- All history items container-->
+    <div class="inbox-history">
+      <!-- Results -->
+      <div class="inbox-history-results">
+        <div class="inbox-history-results-counter">Results: 10 mail(s)</div>
+      </div>
+      <!-- Header -->
+      <div class="inbox-history-header">
+        <div class="inbox-history-header-from">
+          From
+        </div>
+        <div class="inbox-history-header-to">
+          To
+        </div>
+        <div class="inbox-history-header-subject">
+          Subject
+        </div>
+        <div class="inbox-history-header-date active-header-item">
+          Date <i class="fas fa-caret-up"></i>
+        </div>
+      </div>
+      <!-- First item -->
+      <div id="item-1" class="inbox-history-item">
+        <div class="inbox-history-item-icons">
+          <i class="far fa-envelope"></i>
+          <i class="fas fa-long-arrow-alt-down"></i>
+          <i class="far fa-circle"></i>
+        </div>
+        <div class="inbox-history-item-sender">
+          aaa@example.com
+        </div>
+        <div class="inbox-history-item-recipient">
+          zzz.zzz@example.com
+        </div>
+        <div class="inbox-history-item-subject">
+          [ HR-888 ] Notice of official announcement
+        </div>
+        <div class="inbox-history-item-date">
+          0:20
+        </div>
+      </div>
+      <!-- Second item -->
+      <div id="item-2" class="inbox-history-item">
+        <div class="inbox-history-item-icons">
+          <i class="far fa-envelope"></i>
+          <i class="fas fa-long-arrow-alt-down"></i>
+          <i class="far fa-circle"></i>
+        </div>
+        <div class="inbox-history-item-sender">
+          bbb.bbbb@exam...
+        </div>
+        <div class="inbox-history-item-recipient">
+          yyy@example.com
+        </div>
+        <div class="inbox-history-item-subject">
+          [web:333] "Web Contact"
+        </div>
+        <div class="inbox-history-item-date">
+          0:10
+        </div>
+      </div>
+      <!-- Third item -->
+      <div id="item-3" class="inbox-history-item">
+        <div class="inbox-history-item-icons">
+          <i class="far fa-envelope"></i>
+          <i class="fas fa-long-arrow-alt-down"></i>
+          <i class="far fa-circle"></i>
+        </div>
+        <div class="inbox-history-item-sender">
+          ccc@example.com <i class="fas fa-paperclip mobile"></i>
+        </div>
+        <div class="inbox-history-item-recipient">
+          xxx@example.com, ...
+          <div class="recipients-counter">+1</div>
+        </div>
+        <div class="inbox-history-item-subject">
+          Happy New Year! Greetings for the New Year. <i class="fas fa-paperclip desktop"></i>
+        </div>
+        <div class="inbox-history-item-date">
+          0:00
+        </div>
+      </div>
+      <!-- Fourth item -->
+      <div id="item-4" class="inbox-history-item">
+        <div class="inbox-history-item-icons">
+          <i class="far fa-envelope"></i>
+          <i class="fas fa-long-arrow-alt-down"></i>
+          <i class="far fa-circle"></i>
+        </div>
+        <div class="inbox-history-item-sender">
+          ddd.dddd@exam...
+        </div>
+        <div class="inbox-history-item-recipient">
+          vvv.vvv@example.com, ...
+          <div class="recipients-counter">+1</div>
+        </div>
+        <div class="inbox-history-item-subject">
+          [HR-887(Revised: Office Expansion Project Team)] Notice of off...
+        </div>
+        <div class="inbox-history-item-date">
+          Jan 01
+        </div>
+      </div>
+      <!-- Fifth item -->
+      <div id="item-5" class="inbox-history-item">
+        <div class="inbox-history-item-icons">
+          <i class="far fa-envelope"></i>
+          <i class="fas fa-long-arrow-alt-down"></i>
+          <i class="far fa-circle"></i>
+        </div>
+        <div class="inbox-history-item-sender">
+          eee@example.com
+        </div>
+        <div class="inbox-history-item-recipient">
+          sss@example.com, ....
+          <div class="recipients-counter">+2</div>
+        </div>
+        <div class="inbox-history-item-subject">
+          [Github] Logout page
+        </div>
+        <div class="inbox-history-item-date">
+          Jan 01
+        </div>
+      </div>
+      <!-- Sixth item -->
+      <div id="item-6" class="inbox-history-item">
+        <div class="inbox-history-item-icons">
+          <i class="far fa-envelope"></i>
+          <i class="fas fa-long-arrow-alt-down"></i>
+          <i class="far fa-circle"></i>
+        </div>
+        <div class="inbox-history-item-sender">
+          fff.ffff@example.c...
+        </div>
+        <div class="inbox-history-item-recipient">
+          qqq.qqq@example.com
+        </div>
+        <div class="inbox-history-item-subject">
+          ［dev］ Postfix 3.1.12 / 3.2.9 / 3.3.4 / 3.4.5
+        </div>
+        <div class="inbox-history-item-date">
+          Jan 01
+        </div>
+      </div>
+      <!-- Seventh item -->
+      <div id="item-7" class="inbox-history-item">
+        <div class="inbox-history-item-icons">
+          <i class="far fa-envelope"></i>
+          <i class="fas fa-long-arrow-alt-down"></i>
+          <i class="far fa-circle"></i>
+        </div>
+        <div class="inbox-history-item-sender">
+          ggg@example.com
+        </div>
+        <div class="inbox-history-item-recipient">
+          ppp@example.com
+        </div>
+        <div class="inbox-history-item-subject">
+          Re: [Github] Brush-up on loading animation
+        </div>
+        <div class="inbox-history-item-date">
+          Jan 01
+        </div>
+      </div>
+      <!-- Eighth item -->
+      <div id="item-8" class="inbox-history-item">
+        <div class="inbox-history-item-icons">
+          <i class="far fa-envelope"></i>
+          <i class="fas fa-long-arrow-alt-down"></i>
+          <i class="far fa-circle"></i>
+        </div>
+        <div class="inbox-history-item-sender">
+          hhh.hhh@examp...<i class="fas fa-paperclip mobile"></i>
+        </div>
+        <div class="inbox-history-item-recipient">
+          ooo.ooo@example.com
+        </div>
+        <div class="inbox-history-item-subject">
+          Workplace Summary for sample, Inc.: Jun 2 - Jun 9 <i class="fas fa-paperclip desktop"></i>
+        </div>
+        <div class="inbox-history-item-date">
+          Jan 01
+        </div>
+      </div>
+      <!-- Ninth item -->
+      <div id="item-9" class="inbox-history-item">
+        <div class="inbox-history-item-icons">
+          <i class="far fa-envelope"></i>
+          <i class="fas fa-long-arrow-alt-down"></i>
+          <i class="far fa-circle"></i>
+        </div>
+        <div class="inbox-history-item-sender">
+          iii@example.com<i class="fas fa-paperclip mobile"></i>
+        </div>
+        <div class="inbox-history-item-recipient">
+          nnn@example.com
+        </div>
+        <div class="inbox-history-item-subject">
+          I love you
+          <i class="fas fa-paperclip desktop"></i>
+        </div>
+        <div class="inbox-history-item-date">
+          2019/12/31
+        </div>
+      </div>
+      <!-- Tenth item -->
+      <div id="item-10" class="inbox-history-item">
+        <div class="inbox-history-item-icons">
+          <i class="far fa-envelope"></i>
+          <i class="fas fa-long-arrow-alt-down"></i>
+          <i class="far fa-circle"></i>
+        </div>
+        <div class="inbox-history-item-sender">
+          Pablo-Diego-..
+        </div>
+        <div class="inbox-history-item-recipient">
+          Pablo-Diego-José-Francisc...
+        </div>
+        <div class="inbox-history-item-subject">
+          [info:888] ABC EQUIPMENT COMPANY
+        </div>
+        <div class="inbox-history-item-date">
+          2019/12/31
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="src/js/main.js"></script>
+</body>
+
+</html>
