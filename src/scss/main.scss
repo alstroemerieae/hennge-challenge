@@ -88,8 +88,11 @@ body {
           display: none;
         }
         &-sender,
+        &-recipient,
         &-subject {
+          white-space: nowrap;
           overflow: hidden;
+          text-overflow: ellipsis;
         }
         &-recipient,
         &-subject {
