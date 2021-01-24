@@ -1,30 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
-const del = require("del");
-const merge = require("merge-stream");
 const autoprefixer = require('gulp-autoprefixer');
-
-
-
-// Clean vendor
-function clean() {
-  return del(["./vendor/"]);
-}
-
-
-// Bring third party dependencies from node_modules into vendor directory
-function modules() {  
-  // Font Awesome CSS files
-  let fontawesome_js = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/all.min.css')
-    .pipe(gulp.dest('./vendor/fontawesome/css'));
-  
-  // Font Awesome CSS files
-  let fontawesome_fonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/*')
-    .pipe(gulp.dest('./vendor/fontawesome/webfonts'));
-
-  return merge(fontawesome_js, fontawesome_fonts);
-}
 
 
 // Compile scss files into a single minified css file
@@ -51,11 +28,5 @@ function watch() {
 }
 
 
-// Define tasks
-const build = gulp.series(clean, modules, style);
-
-
 // Export tasks
-exports.default = build;
-exports.build = build;
 exports.watch = watch;

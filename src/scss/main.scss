@@ -9,6 +9,7 @@
 	--dark-color: #666460;
   --darker-color: #343535;
   --hover-color: #0037d9;
+  --border-color: #e0e0e0;
 }
 
 * {
@@ -32,21 +33,23 @@ body {
 
     .search-bar {
       display: inherit;
-      border: 1px solid var(--gray-color);
+      border: 2px solid var(--border-color);
       border-radius: 0.5rem;
       &-date-selector {
         display: inherit;
+        align-items: center;
         padding: 1rem;
         
-        i.far.fa-calendar-alt {
+        .icon-calendar {
           margin-right: 1rem;
           color: var(--dark-color);
         }
       }
       &-button {
         background: var(--light-color);
-        padding: 1rem;
-        border-radius: 0.5rem;
+        padding: 1rem 1.25rem;
+        border-radius: 0% .5rem .5rem 0%;
+        border-left: 2px solid var(--border-color);
       }
     }
   }
@@ -59,7 +62,6 @@ body {
     .inbox-history {
       display: grid;
       grid-template-columns: 1.5fr 2.5fr 5fr 1fr;
-      // border: 1px solid red;
       grid-template-rows: repeat(12, 1fr);
       height: 100%;
 
@@ -71,7 +73,7 @@ body {
         grid-template-columns: inherit;
         justify-content: center;
         align-items: center;
-        padding-left: 1rem;
+        padding: 1rem;
       }
       &-results {
         font-weight: bold;
@@ -81,7 +83,7 @@ body {
         }
       }
       &-item {
-        border-bottom: 1px solid gray;
+        border-bottom: 2px solid var(--border-color);
         &-icons {
           display: none;
         }
@@ -102,14 +104,15 @@ body {
         background-color: var(--light-color)
       }
       &-header {
-        border-top: 1px solid var(--gray-color);
-        border-bottom: 1px solid var(--gray-color);
+        border-top: 2px solid var(--border-color);
+        border-bottom: 2px solid var(--border-color);
         background-color: var(--light-color);
         color: var(--dark-color);
         font-weight: bold;
       }
       &-item-date {
         font-weight: bold;
+        display: flex;
       }
     }
   }
@@ -130,6 +133,20 @@ body {
 .mobile {
   display: none
 }
+
+.icon {
+  width: 1.5rem;
+}
+
+.icon-arrow-1 {
+  width: 0.75rem;
+}
+
+.icon-arrow-2 {
+  width: 0.5rem;
+  margin-left: 1rem; 
+}
+
 
 // Visuals
 // main {
