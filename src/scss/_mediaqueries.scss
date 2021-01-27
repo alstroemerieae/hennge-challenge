@@ -18,11 +18,12 @@
   }
   .compacted-history {
     grid-column: 1/2 !important;
+    grid-row: 3/4 !important;
   }
   
   .compacted-viewer {
     grid-column: 1/2;
-    grid-row: 2/3 !important;
+    grid-row: 1/2 !important;
   }
 
   header {
@@ -41,14 +42,14 @@
         grid-row: 1/2;
         padding: 1rem;
         display: flex !important; // repeated
-        justify-content: start !important; // repeated
+        justify-content: flex-start !important; // repeated
       }
       &-history {
         grid-row: 2/3;
         &-header {
           // padding: 1rem 0;
           display: flex !important;
-          justify-content: start !important;
+          justify-content: flex-start !important;
           // All items inside header  
           & > * {
             display: flex;

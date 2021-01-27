@@ -150,5 +150,4 @@ function deleteMessage(el) {
   element.parentNode.remove();
   totalEmailsCounter--;
   console.log(totalEmailsCounter);
-
 }
