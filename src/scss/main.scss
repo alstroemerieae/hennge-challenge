@@ -57,12 +57,13 @@ body {
   }
 
   main {
-
+    height: 100vh;
+    margin: 1rem 2rem 0rem 2rem;
     .inbox {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 4rem 15fr;
-      padding: 1rem 2rem 0rem 2rem;
+      grid-template-rows: 4rem 9fr 1fr;
+      // padding: 1rem 2rem 0rem 2rem;
       height: 100%;
       background-image: url('');
       background-repeat: no-repeat;
@@ -98,7 +99,8 @@ body {
           grid-template-columns: inherit;
           justify-content: center;
           align-items: center;
-          padding: 1rem;
+          padding: .75rem;
+          // border: 1px solid red;
         }
         &-header {
           // border: 1px solid red;
@@ -106,6 +108,7 @@ body {
           border-bottom: 2px solid var(--border-color);
           background-color: var(--light-color);
           color: var(--dark-color);
+          font-size: 1rem;
           font-weight: bold;
           & > * {
             display: flex;
@@ -129,7 +132,11 @@ body {
           &-subject {
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis; // Not working
+            text-overflow: ellipsis;
+            p {
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
           }
           &-recipient,
           &-subject {
@@ -164,8 +171,9 @@ body {
       }
       // History viewer container
       &-viewer {
-        grid-row: 2/3;
-        background-color: var(--gray-color);
+        grid-row: 2/4;
+        background-color: var(--light-color);
+        border: 2px solid var(--border-color);
         display: flex;
         flex-direction: column;
         .inbox-item-expanded {
@@ -174,7 +182,7 @@ body {
           grid-template-columns: 9fr 9fr 2fr;
           grid-template-rows: 1fr 1fr auto;
           margin-bottom: 1rem;
-          border: 1px solid black;
+          box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.17);
           &-sender,
           &-recipient,
           &-subject,
@@ -280,8 +288,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 1rem;
-  color: var(--light-color);
+  color: lightcoral;
   border: 1px solid var(--border-color);
   padding: .2rem;
 }
