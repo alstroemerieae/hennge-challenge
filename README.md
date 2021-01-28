@@ -1,3 +1,11 @@
+# How to run this project
+```
+git clone https://github.com/LGA-dev/hennge-challenge.git
+cd hennge-challenge
+npm install
+gulp watch
+```
+
 # Description
 Suppose we have a system which archives emails of an organization. In the event of security incidents (such as leakage of sensitive information via emails), this system will be used by the organization's auditing department to retrieve and verify the emails of the concerning parties through its admin console. We would like you to design the user interface (UI) mockup for this system.
 
