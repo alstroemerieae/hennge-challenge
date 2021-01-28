@@ -29,13 +29,13 @@
   </header>
   <main>
     <div class="inbox" id="inbox-container">
-      <!-- Inbox Results -->
+      <!-- Inbox history results container -->
       <div class="inbox-results">
         <p>Results: <div class="inbox-results-counter">10</div> mail(s)</p>
       </div>
-      <!-- Inbox Items -->
+      <!-- Inbox history emails container -->
       <div class="inbox-history" id="inbox-history">
-        <!-- Header -->
+        <!-- History Header -->
         <div class="inbox-history-header">
           <div class="inbox-history-header-from header-item">
             <p>From</p>
@@ -54,237 +54,240 @@
             <img class="icon icon-arrow-1" src="src/assets/images/icon_arrow01.svg" alt="Arrow icon pointing upwards">
           </div>
         </div>
-        <!-- First item -->
-        <div id="item-1" class="inbox-history-item">
-          <div class="inbox-history-item-icons">
-            <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+        <!-- History Content -->
+        <div class="inbox-history-content">
+          <!-- First item -->
+          <div id="item-1" class="inbox-history-email">
+            <div class="inbox-history-email-icons">
+              <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+            </div>
+            <div class="inbox-history-email-sender">
+              <p>aaa@example.com</p>
+            </div>
+            <div class="inbox-history-email-recipient">
+              <p>zzz.zzz@example.com</p>
+            </div>
+            <div class="inbox-history-email-subject">
+              <p>[ HR-888 ] Notice of official announcement</p>
+            </div>
+            <div class="inbox-history-email-date">
+              <p>0:20</p>
+              <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
+            </div>
+            <div class="inbox-history-email-body">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
           </div>
-          <div class="inbox-history-item-sender">
-            <p>aaa@example.com</p>
+          <!-- Second item -->
+          <div id="item-2" class="inbox-history-email">
+            <div class="inbox-history-email-icons">
+              <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+            </div>
+            <div class="inbox-history-email-sender">
+              <p>bbb.bbbb@example</p>
+            </div>
+            <div class="inbox-history-email-recipient">
+              <p>yyy@example.com</p>
+            </div>
+            <div class="inbox-history-email-subject">
+              <p>[web:333] "Web Contact"</p>
+            </div>
+            <div class="inbox-history-email-date">
+              <p>0:10</p>
+              <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
+            </div>
+            <div class="inbox-history-email-body">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            </div>
           </div>
-          <div class="inbox-history-item-recipient">
-            <p>zzz.zzz@example.com</p>
+          <!-- Third item -->
+          <div id="item-3" class="inbox-history-email">
+            <div class="inbox-history-email-icons">
+              <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+            </div>
+            <div class="inbox-history-email-sender">
+              <p>ccc@example.com</p>
+              <img class="icon icon-clip mobile"src="src/assets/images/icon_clip.svg" alt="Clip icon">
+            </div>
+            <div class="inbox-history-email-recipient">
+              <p>xxx@example.com, ...</p>
+              <div class="recipient-counter">+1</div>
+            </div>
+            <div class="inbox-history-email-subject">
+              <p>Happy New Year! Greetings for the New Year.</p>
+              <img class="icon icon-clip desktop" src="src/assets/images/icon_clip.svg" alt="Clip icon">
+            </div>
+            <div class="inbox-history-email-date">
+              <p>0:00</p>
+              <img class="icon icon-arrow-2 mobile" src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
+            </div>
+            <div class="inbox-history-email-body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facere!</p>
+            </div>
           </div>
-          <div class="inbox-history-item-subject">
-            <p>[ HR-888 ] Notice of official announcement</p>
+          <!-- Fourth item -->
+          <div id="item-4" class="inbox-history-email">
+            <div class="inbox-history-email-icons">
+              <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+            </div>
+            <div class="inbox-history-email-sender">
+              <p>ddd.dddd@example</p>
+            </div>
+            <div class="inbox-history-email-recipient">
+              <p>vvv.vvv@example.com, ...</p>
+              <div class="recipient-counter">+1</div>
+            </div>
+            <div class="inbox-history-email-subject">
+              <p>[HR-887(Revised: Office Expansion Project Team)] Notice of office</p>
+            </div>
+            <div class="inbox-history-email-date">
+              <p>Jan&nbsp;01</p>
+              <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
+            </div>
+            <div class="inbox-history-email-body">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel sint tempore deserunt sapiente explicabo!</p>
+            </div>
           </div>
-          <div class="inbox-history-item-date">
-            <p>0:20</p>
-            <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
+          <!-- Fifth item -->
+          <div id="item-5" class="inbox-history-email">
+            <div class="inbox-history-email-icons">
+              <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+            </div>
+            <div class="inbox-history-email-sender">
+              <p>eee@example.com</p>
+            </div>
+            <div class="inbox-history-email-recipient">
+              <p>sss@example.com, ....</p>
+              <div class="recipient-counter">+2</div>
+            </div>
+            <div class="inbox-history-email-subject">
+              <p>[Github] Logout page</p>
+            </div>
+            <div class="inbox-history-email-date">
+              <p>Jan&nbsp;01</p>
+              <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
+            </div>
+            <div class="inbox-history-email-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ipsa accusamus amet nesciunt error a architecto cupiditate doloremque molestiae consequuntur?</p>
+            </div>
           </div>
-          <div class="inbox-history-item-body">
-            <p>Lorem ipsum dolor sit amet.</p>
+          <!-- Sixth item -->
+          <div id="item-6" class="inbox-history-email">
+            <div class="inbox-history-email-icons">
+              <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+            </div>
+            <div class="inbox-history-email-sender">
+              <p>fff.ffff@example.com</p>
+            </div>
+            <div class="inbox-history-email-recipient">
+              <p>qqq.qqq@example.com</p>
+            </div>
+            <div class="inbox-history-email-subject">
+              <p>[dev] Postfix 3.1.12 / 3.2.9 / 3.3.4 / 3.4.5</p>
+            </div>
+            <div class="inbox-history-email-date">
+              <p>Jan&nbsp;01</p>
+              <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
+            </div>
+            <div class="inbox-history-email-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, possimus. Impedit totam aut expedita, reiciendis consequatur delectus neque a eum culpa veritatis voluptatum?</p>
+            </div>
           </div>
-        </div>
-        <!-- Second item -->
-        <div id="item-2" class="inbox-history-item">
-          <div class="inbox-history-item-icons">
-            <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+          <!-- Seventh item -->
+          <div id="item-7" class="inbox-history-email">
+            <div class="inbox-history-email-icons">
+              <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+            </div>
+            <div class="inbox-history-email-sender">
+              <p>ggg@example.com</p>
+            </div>
+            <div class="inbox-history-email-recipient">
+              <p>ppp@example.com</p>
+            </div>
+            <div class="inbox-history-email-subject">
+              <p>Re: [Github] Brush-up on loading animation</p>
+            </div>
+            <div class="inbox-history-email-date">
+              <p>Jan&nbsp;01</p>
+              <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
+            </div>
+            <div class="inbox-history-email-body">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur incidunt architecto laudantium facilis labore, voluptatibus ducimus hic sit libero reiciendis officiis odit inventore minus, quis deserunt repellendus est! Quo, tempore.</p>
+            </div>
           </div>
-          <div class="inbox-history-item-sender">
-            <p>bbb.bbbb@example</p>
+          <!-- Eighth item -->
+          <div id="item-8" class="inbox-history-email">
+            <div class="inbox-history-email-icons">
+              <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+            </div>
+            <div class="inbox-history-email-sender">
+              <p>hhh.hhh@example.com</p>
+              <img class="icon icon-clip mobile"src="src/assets/images/icon_clip.svg" alt="Clip icon">
+            </div>
+            <div class="inbox-history-email-recipient">
+              <p>ooo.ooo@example.com</p>
+            </div>
+            <div class="inbox-history-email-subject">
+              <p>Workplace Summary for sample, Inc.: Jun 2 - Jun 9</p>
+              <img class="icon icon-clip desktop"src="src/assets/images/icon_clip.svg" alt="Clip icon">
+            </div>
+            <div class="inbox-history-email-date">
+              <p>Jan&nbsp;01</p>
+              <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
+            </div>
+            <div class="inbox-history-email-body">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum incidunt fuga animi dolorem omnis tenetur inventore, itaque ipsum facere sequi magni rerum doloremque numquam aspernatur voluptas minus vero possimus vitae eum. Eos id veniam doloremque quam?</p>
+            </div>
           </div>
-          <div class="inbox-history-item-recipient">
-            <p>yyy@example.com</p>
+          <!-- Ninth item -->
+          <div id="item-9" class="inbox-history-email">
+            <div class="inbox-history-email-icons">
+              <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+            </div>
+            <div class="inbox-history-email-sender">
+              <p>iii@example.com</p>
+              <img class="icon icon-clip mobile"src="src/assets/images/icon_clip.svg" alt="Clip icon">
+            </div>
+            <div class="inbox-history-email-recipient">
+              <p>nnn@example.com</p>
+            </div>
+            <div class="inbox-history-email-subject">
+              <p>I love you</p>
+              <img class="icon icon-clip desktop"src="src/assets/images/icon_clip.svg" alt="Clip icon">
+            </div>
+            <div class="inbox-history-email-date">
+              <p>2019/12/31</p>
+              <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
+            </div>
+            <div class="inbox-history-email-body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores esse repudiandae corporis numquam beatae quo, a in iste praesentium sequi inventore odit. Velit tempora amet quod quibusdam nam quo vel harum ut, labore nisi numquam ipsam quam, facere ad est rerum.</p>
+            </div>
           </div>
-          <div class="inbox-history-item-subject">
-            <p>[web:333] "Web Contact"</p>
-          </div>
-          <div class="inbox-history-item-date">
-            <p>0:10</p>
-            <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
-          </div>
-          <div class="inbox-history-item-body">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-        <!-- Third item -->
-        <div id="item-3" class="inbox-history-item">
-          <div class="inbox-history-item-icons">
-            <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
-          </div>
-          <div class="inbox-history-item-sender">
-            <p>ccc@example.com</p>
-            <img class="icon icon-clip mobile"src="src/assets/images/icon_clip.svg" alt="Clip icon">
-          </div>
-          <div class="inbox-history-item-recipient">
-            <p>xxx@example.com, ...</p>
-            <div class="inbox-history-item-recipient-counter">+1</div>
-          </div>
-          <div class="inbox-history-item-subject">
-            <p>Happy New Year! Greetings for the New Year.</p>
-            <img class="icon icon-clip desktop" src="src/assets/images/icon_clip.svg" alt="Clip icon">
-          </div>
-          <div class="inbox-history-item-date">
-            <p>0:00</p>
-            <img class="icon icon-arrow-2 mobile" src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
-          </div>
-          <div class="inbox-history-item-body">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facere!</p>
-          </div>
-        </div>
-        <!-- Fourth item -->
-        <div id="item-4" class="inbox-history-item">
-          <div class="inbox-history-item-icons">
-            <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
-          </div>
-          <div class="inbox-history-item-sender">
-            <p>ddd.dddd@example</p>
-          </div>
-          <div class="inbox-history-item-recipient">
-            <p>vvv.vvv@example.com, ...</p>
-            <div class="inbox-history-item-recipient-counter">+1</div>
-          </div>
-          <div class="inbox-history-item-subject">
-            <p>[HR-887(Revised: Office Expansion Project Team)] Notice of office</p>
-          </div>
-          <div class="inbox-history-item-date">
-            <p>Jan&nbsp;01</p>
-            <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
-          </div>
-          <div class="inbox-history-item-body">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel sint tempore deserunt sapiente explicabo!</p>
-          </div>
-        </div>
-        <!-- Fifth item -->
-        <div id="item-5" class="inbox-history-item">
-          <div class="inbox-history-item-icons">
-            <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
-          </div>
-          <div class="inbox-history-item-sender">
-            <p>eee@example.com</p>
-          </div>
-          <div class="inbox-history-item-recipient">
-            <p>sss@example.com, ....</p>
-            <div class="inbox-history-item-recipient-counter">+2</div>
-          </div>
-          <div class="inbox-history-item-subject">
-            <p>[Github] Logout page</p>
-          </div>
-          <div class="inbox-history-item-date">
-            <p>Jan&nbsp;01</p>
-            <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
-          </div>
-          <div class="inbox-history-item-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ipsa accusamus amet nesciunt error a architecto cupiditate doloremque molestiae consequuntur?</p>
-          </div>
-        </div>
-        <!-- Sixth item -->
-        <div id="item-6" class="inbox-history-item">
-          <div class="inbox-history-item-icons">
-            <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
-          </div>
-          <div class="inbox-history-item-sender">
-            <p>fff.ffff@example.com</p>
-          </div>
-          <div class="inbox-history-item-recipient">
-            <p>qqq.qqq@example.com</p>
-          </div>
-          <div class="inbox-history-item-subject">
-            <p>[dev] Postfix 3.1.12 / 3.2.9 / 3.3.4 / 3.4.5</p>
-          </div>
-          <div class="inbox-history-item-date">
-            <p>Jan&nbsp;01</p>
-            <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
-          </div>
-          <div class="inbox-history-item-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, possimus. Impedit totam aut expedita, reiciendis consequatur delectus neque a eum culpa veritatis voluptatum?</p>
-          </div>
-        </div>
-        <!-- Seventh item -->
-        <div id="item-7" class="inbox-history-item">
-          <div class="inbox-history-item-icons">
-            <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
-          </div>
-          <div class="inbox-history-item-sender">
-            <p>ggg@example.com</p>
-          </div>
-          <div class="inbox-history-item-recipient">
-            <p>ppp@example.com</p>
-          </div>
-          <div class="inbox-history-item-subject">
-            <p>Re: [Github] Brush-up on loading animation</p>
-          </div>
-          <div class="inbox-history-item-date">
-            <p>Jan&nbsp;01</p>
-            <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
-          </div>
-          <div class="inbox-history-item-body">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur incidunt architecto laudantium facilis labore, voluptatibus ducimus hic sit libero reiciendis officiis odit inventore minus, quis deserunt repellendus est! Quo, tempore.</p>
-          </div>
-        </div>
-        <!-- Eighth item -->
-        <div id="item-8" class="inbox-history-item">
-          <div class="inbox-history-item-icons">
-            <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
-          </div>
-          <div class="inbox-history-item-sender">
-            <p>hhh.hhh@example.com</p>
-            <img class="icon icon-clip mobile"src="src/assets/images/icon_clip.svg" alt="Clip icon">
-          </div>
-          <div class="inbox-history-item-recipient">
-            <p>ooo.ooo@example.com</p>
-          </div>
-          <div class="inbox-history-item-subject">
-            <p>Workplace Summary for sample, Inc.: Jun 2 - Jun 9</p>
-            <img class="icon icon-clip desktop"src="src/assets/images/icon_clip.svg" alt="Clip icon">
-          </div>
-          <div class="inbox-history-item-date">
-            <p>Jan&nbsp;01</p>
-            <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
-          </div>
-          <div class="inbox-history-item-body">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum incidunt fuga animi dolorem omnis tenetur inventore, itaque ipsum facere sequi magni rerum doloremque numquam aspernatur voluptas minus vero possimus vitae eum. Eos id veniam doloremque quam?</p>
-          </div>
-        </div>
-        <!-- Ninth item -->
-        <div id="item-9" class="inbox-history-item">
-          <div class="inbox-history-item-icons">
-            <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
-          </div>
-          <div class="inbox-history-item-sender">
-            <p>iii@example.com</p>
-            <img class="icon icon-clip mobile"src="src/assets/images/icon_clip.svg" alt="Clip icon">
-          </div>
-          <div class="inbox-history-item-recipient">
-            <p>nnn@example.com</p>
-          </div>
-          <div class="inbox-history-item-subject">
-            <p>I love you</p>
-            <img class="icon icon-clip desktop"src="src/assets/images/icon_clip.svg" alt="Clip icon">
-          </div>
-          <div class="inbox-history-item-date">
-            <p>2019/12/31</p>
-            <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
-          </div>
-          <div class="inbox-history-item-body">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores esse repudiandae corporis numquam beatae quo, a in iste praesentium sequi inventore odit. Velit tempora amet quod quibusdam nam quo vel harum ut, labore nisi numquam ipsam quam, facere ad est rerum.</p>
-          </div>
-        </div>
-        <!-- Tenth item -->
-        <div id="item-10" class="inbox-history-item">
-          <div class="inbox-history-item-icons">
-            <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
-          </div>
-          <div class="inbox-history-item-sender">
-            <p>Pablo-Diego-José-Francisco</p>
-          </div>
-          <div class="inbox-history-item-recipient">
-            <p>Pablo-Diego-José-Francisco</p>
-          </div>
-          <div class="inbox-history-item-subject">
-            <p>[info:888] ABC EQUIPMENT COMPANY</p>
-          </div>
-          <div class="inbox-history-item-date">
-            <p>2019/12/31</p>
-            <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
-          </div>
-          <div class="inbox-history-item-body">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit praesentium corporis ipsum eum doloremque distinctio quasi voluptas. Unde velit quisquam ab architecto fuga obcaecati earum modi sapiente et fugiat expedita iusto autem, laboriosam ipsam, facere animi dolor quae odio hic? Facere dignissimos vero sapiente eius aperiam atque explicabo similique quia?</p>
+          <!-- Tenth item -->
+          <div id="item-10" class="inbox-history-email">
+            <div class="inbox-history-email-icons">
+              <img class="icon icon-mail"src="src/assets/images/icon_mail_sp.svg" alt="Email icon">
+            </div>
+            <div class="inbox-history-email-sender">
+              <p>Pablo-Diego-José-Francisco</p>
+            </div>
+            <div class="inbox-history-email-recipient">
+              <p>Pablo-Diego-José-Francisco</p>
+            </div>
+            <div class="inbox-history-email-subject">
+              <p>[info:888] ABC EQUIPMENT COMPANY</p>
+            </div>
+            <div class="inbox-history-email-date">
+              <p>2019/12/31</p>
+              <img class="icon icon-arrow-2 mobile"src="src/assets/images/icon_arrow02.svg" alt="Arrow icon pointing right">
+            </div>
+            <div class="inbox-history-email-body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit praesentium corporis ipsum eum doloremque distinctio quasi voluptas. Unde velit quisquam ab architecto fuga obcaecati earum modi sapiente et fugiat expedita iusto autem, laboriosam ipsam, facere animi dolor quae odio hic? Facere dignissimos vero sapiente eius aperiam atque explicabo similique quia?</p>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Inbox Viewer -->
+      <!-- Inbox expanded emails container -->
       <div class="inbox-viewer" id="inbox-viewer">
         <!-- Inserted html with javascript -->
       </div>

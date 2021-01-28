@@ -1,6 +1,3 @@
-// Add active item on header [from, to, subject, (date)]
-// Add on hover style
-
 // @import "test";
 
 // Colors
@@ -22,18 +19,16 @@
 body {
   display: flex;
   flex-direction: column;
+  height: 100vh;
   user-select: none;
   background: var(--lighter-color);
   color: var(--darker-color);
-  height: 100vh;
   font-size: 1.25rem;
   font-family: sans-serif;
-
 
   header {
     padding: 2rem 2rem 0rem 2rem;
     display: flex;
-
     .search-bar {
       display: inherit;
       border: 2px solid var(--border-color);
@@ -63,12 +58,11 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 4rem 9fr 1fr;
-      // padding: 1rem 2rem 0rem 2rem;
       height: 100%;
       background-image: url('');
       background-repeat: no-repeat;
       background-position: center;
-      // History results container
+      // Inbox history results container
       &-results {
         grid-column: 1/3;
         grid-row: 1/2;
@@ -83,106 +77,97 @@ body {
           padding: 0rem .25rem;
         }
       }
-      // History items container
+      // Inbox history emails container
       &-history {
         grid-column: 1/3;
         grid-row: 2/3;
-        // background: blue;
+        
         display: grid;
-        grid-template-columns: 1.5fr 2.5fr 5fr 1fr;
-        grid-template-rows:  auto repeat(10, 1fr);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr; // ?
         height: 100%;
         &-header,
-        &-item {
-          grid-column: 1/5;
+        &-content {
+          grid-column: 1/3;
+          
+          grid-template-columns: 1.5fr 2.5fr 5fr 1fr;
+        }
+        &-header,
+        .inbox-history-email {
           display: grid;
-          grid-template-columns: inherit;
-          justify-content: center;
-          align-items: center;
           padding: .75rem;
-          // border: 1px solid red;
+          border-bottom: 2px solid var(--border-color);
         }
         &-header {
-          // border: 1px solid red;
-          // border-top: 2px solid var(--border-color);
-          border-bottom: 2px solid var(--border-color);
+          grid-row: 1/2;
+          
           background-color: var(--light-color);
           color: var(--dark-color);
           font-size: 1rem;
           font-weight: bold;
+          // Select all items inside the header
           & > * {
             display: flex;
-          }
-          // cursor: pointer;
-          &-from,
-          &-to,
-          &-subject,
-          &-date{ 
-            cursor: pointer;
-          }
-        }
-        &-item {
-          // border: 1px solid blue;
-          border-bottom: 2px solid var(--border-color);
-          &-icons {
-            display: none;
-          }
-          &-sender,
-          &-recipient,
-          &-subject {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
             p {
-              overflow: hidden;
-              text-overflow: ellipsis;
+              cursor: pointer;
             }
-          }
-          &-recipient,
-          &-subject {
-            display: flex;
-            justify-content: space-between;
-            padding-right: 2rem;
-          }
-          &-date {
-            font-weight: bold;
-            display: flex; // Delete?
-          }
-          &-recipient {
-            &-counter {
-              display: inline;
-              color: var(--lighter-color);
-              background: var(--dark-color);
-              padding: .2rem .5rem .2rem .5rem;
-              border-radius: .2rem;
-              font-size: 1rem;
-            }
-          }
-          // Hide the history item body text by default
-          &-body {
-            display: none;
           }
         }
-        &-item:hover {
-          color: var(--hover-color);
-          cursor: pointer;
-          background-color: var(--light-color)
+        &-content {
+          grid-row: 2/3;
+          
+          .inbox-history-email {
+            // grid-template-columns: 1.5fr 2.5fr 5fr 1fr;
+            grid-template-columns: inherit;
+            &-sender,
+            &-recipient,
+            &-subject,
+            &-date {
+              display: flex;
+              justify-content: space-between;
+              padding-right: 2rem;
+              white-space: nowrap;
+              overflow: hidden;
+              p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+            }
+            &-date {
+              // Fix
+              font-weight: bold;
+            }
+            // Hide the email body by default
+            &-body {
+              display: none;
+            }
+            // Hide the email icons by default
+            &-icons {
+              display: none;
+            }
+          }
+          .inbox-history-email:hover {
+            color: var(--hover-color);
+            cursor: pointer;
+            background-color: var(--light-color);
+          }
         }
       }
-      // History viewer container
+      // Inbox expanded emails container
       &-viewer {
         grid-row: 2/4;
-        background-color: var(--light-color);
-        border: 2px solid var(--border-color);
+        
         display: flex;
         flex-direction: column;
-        .inbox-item-expanded {
-          position: relative;
+        background-color: var(--light-color);
+        .inbox-email-expanded {
           display: grid;
           grid-template-columns: 9fr 9fr 2fr;
           grid-template-rows: 1fr 1fr auto;
           margin-bottom: 1rem;
+          border: 1px solid var(--border-color);
           box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.17);
+          position: relative; // This keeps the close button inside the div
           &-sender,
           &-recipient,
           &-subject,
@@ -210,13 +195,11 @@ body {
             grid-column: 2/4;
             grid-row: 1/2;
             border-left: 1px solid var(--border-color);
-
           }
           &-date {
             grid-column: 3/4;
             grid-row: 2/3;
             border-left: 1px solid var(--border-color);
-
           }
           &-subject {
             grid-column: 1/3;
@@ -224,8 +207,8 @@ body {
           }
           &-body {
             grid-column: 1/4;
-            background: white;
-            color: black;
+            background: var(--lighter-color);
+            color: var(--darker-color);
           }
         }
       }
@@ -237,22 +220,20 @@ body {
 // Utility classes
 
 
-// Display classes
-
+// Display
 .visibility-hidden {
   visibility: hidden;
 }
 
 .mobile {
   display: none;
-  // border: 1px solid magenta;
 }
 
 .desktop {
   display: block;
-  // border: 1px solid cyan;
 }
 
+// Grid position
 .compacted-history {
   grid-column: 1/2 !important;
 }
@@ -261,8 +242,7 @@ body {
   grid-column: 2/3;
 }
 
-// Icon classes
-
+// Icons
 .icon {
   width: 1.5rem;
 }
@@ -278,10 +258,8 @@ body {
 }
 
 // Other classes 
-
 .active-header-item {
   color: var(--darker-color);
-  // color: red;
 }
 
 .window-close {
@@ -293,22 +271,13 @@ body {
   padding: .2rem;
 }
 
-// Visuals
-// main {
-//   border: 2px solid magenta;
-//   .inbox-history {
-//     background: gray;
-//     border: 2px solid cyan;
-//     &-results {
-//       background: red;
-//     }
-//     &-header {
-//       background: green;
-//     }
-//     &-item {
-//       background: yellow;
-//     }
-//   }
-// }
+.recipient-counter {
+  display: inline;
+  color: var(--lighter-color);
+  background: var(--dark-color);
+  padding: .2rem .5rem .2rem .5rem;
+  border-radius: .2rem;
+  font-size: 1rem;
+}
 
 @import "mediaqueries";
