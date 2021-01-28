@@ -2,7 +2,9 @@
 
 This mission was easy for me because the user interface was based on a previously created design. I have a hard time creating the user interface by myself.
 
-I had mistakenly used awesome font icons instead of the ones included in the resources.
+***You should click on the results section (below the date search section) to see how the inbox would look without emails on it.***
+
+I had mistakenly used awesome font icons instead of the ones included in the resources, but I was able to fix this easily.
 
 Also, I learned [how to prevent line breaks on my divs](https://www.digitalocean.com/community/tutorials/css-prevent-line-break), which will come in handy for future projects. This fix was necessary so that the email elements didn't break the layout. 
 
