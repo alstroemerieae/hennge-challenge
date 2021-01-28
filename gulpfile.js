@@ -16,6 +16,7 @@ function style() {
 
 // Create a local server and watch for changes
 function watch() {
+  style();
   browserSync.init({
     server: {
       baseDir: ".",

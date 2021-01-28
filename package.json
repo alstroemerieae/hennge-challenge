@@ -4,7 +4,7 @@
   "description": "A boilerplate for front-end projects that includes Gulp 4, Sass, FontAwesome 5, BrowserSync and Autoprefixer.",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp watch"
   },
   "keywords": [],
   "author": "Luciano Alcaraz",
