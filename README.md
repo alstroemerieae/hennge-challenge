@@ -3,7 +3,7 @@
 git clone https://github.com/LGA-dev/hennge-challenge.git
 cd hennge-challenge
 npm install
-npm run watch
+npm run start
 ```
 
 # Description
