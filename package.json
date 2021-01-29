@@ -1,7 +1,7 @@
 {
-  "name": "sass-fontawesome-gulp-boilerplate",
+  "name": "sass-gulp-boilerplate",
   "version": "1.0.0",
-  "description": "A boilerplate for front-end projects that includes Gulp 4, Sass, FontAwesome 5, BrowserSync and Autoprefixer.",
+  "description": "A boilerplate for front-end projects that includes Gulp 4, Sass, BrowserSync and Autoprefixer.",
   "main": "index.js",
   "scripts": {
     "start": "gulp watch"
@@ -9,9 +9,6 @@
   "keywords": [],
   "author": "Luciano Alcaraz",
   "license": "ISC",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1"
-  },
   "devDependencies": {
     "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
